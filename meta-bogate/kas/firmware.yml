@@ -1,0 +1,39 @@
+header:
+  version: 11
+
+machine: raspberrypi4-64
+
+local_conf_header:
+  kernel_workaround: |
+    PREFERRED_VERSION_linux-raspberrypi = "6.12%"
+    SRCREV_machine:pn-linux-raspberrypi = "5f23da14d91d4ba66604ec75453564e4e2afc57e"
+    KERNEL_VERSION_SANITY_SKIP:pn-linux-raspberrypi = "1"
+
+repos:
+  poky:
+    url: https://git.yoctoproject.org/poky
+    branch: scarthgap
+    path: sources/poky
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+
+  meta-raspberrypi:
+    url: https://git.yoctoproject.org/meta-raspberrypi
+    branch: scarthgap
+    path: sources/meta-raspberrypi
+
+  meta-openembedded:
+    url: https://git.openembedded.org/meta-openembedded
+    branch: scarthgap
+    path: sources/meta-openembedded
+    layers:
+      meta-oe:
+      meta-networking:
+      meta-python:
+
+  meta-bogate:
+    path: .
+    layers:
+      meta-bogate:
