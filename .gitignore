@@ -1,0 +1,9 @@
+# Yocto build outputs (only relevant if created under this repo)
+build/
+tmp/
+sstate-cache/
+downloads/
+cache/
+
+# Local build config
+conf/site.conf
