@@ -9,6 +9,9 @@ local_conf_header:
     SRCREV_machine:pn-linux-raspberrypi = "5f23da14d91d4ba66604ec75453564e4e2afc57e"
     KERNEL_VERSION_SANITY_SKIP:pn-linux-raspberrypi = "1"
 
+  ssh: |
+    IMAGE_FEATURES += "ssh-server-openssh"
+
 repos:
   poky:
     url: https://git.yoctoproject.org/poky
