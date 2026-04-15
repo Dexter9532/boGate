@@ -10,7 +10,7 @@ local_conf_header:
     KERNEL_VERSION_SANITY_SKIP:pn-linux-raspberrypi = "1"
 
   ssh: |
-    IMAGE_FEATURES += "ssh-server-openssh"
+    EXTRA_IMAGE_FEATURES:append = " ssh-server-dropbear"
 
 repos:
   poky:
