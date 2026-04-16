@@ -29,7 +29,7 @@ pip install kas
 Manually build image:
 
 ```bash
-kas-container build meta-bogate/kas/firmware.yml
+kas-container build
 ```
 
 ## Flash image
