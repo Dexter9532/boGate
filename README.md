@@ -6,6 +6,12 @@ A small Yocto-based project for getting familiar with building firmware for Rasp
 
 The image is built and uploaded as a GitHub Actions artifact when workflow dispatch is triggered. Publishing builds from tags will be added later.
 
+Clone the repo and cd into it:
+
+```bash
+git clone git@github.com:Dexter9532/boGate.git && cd boGate
+```
+
 Set up a virtual environment and install `kas`:
 
 ```bash
