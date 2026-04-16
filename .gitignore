@@ -5,5 +5,9 @@ sstate-cache/
 downloads/
 cache/
 
+# Sources
+sources
+!sources/meta-bogate
+
 # Local build config
 conf/site.conf
