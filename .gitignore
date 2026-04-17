@@ -6,8 +6,9 @@ downloads/
 cache/
 
 # Sources
-sources
-!sources/meta-bogate
+sources/*
+!sources/meta-bogate/
+!sources/meta-bogate/**
 
 # Local build config
 conf/site.conf
