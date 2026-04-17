@@ -2,6 +2,14 @@
 
 A small Yocto-based project for getting familiar with building firmware for Raspberry Pi 4.
 
+## Hardware
+
+* [Raspberry-pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) #NOTE boGate is tested on raspberry pi 4 model b with 2GB RAM.
+
+## Prerequisites
+
+* Install [Podman](https://podman.io/docs/installation)
+
 ## Get started
 
 The image is built and uploaded as a GitHub Actions artifact when workflow dispatch is triggered. Publishing builds from tags will be added later.
