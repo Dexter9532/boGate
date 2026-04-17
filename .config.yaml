@@ -39,4 +39,4 @@ repos:
   meta-bogate:
     path: sources/meta-bogate
     layers:
-      meta-bogate:
+      .:
