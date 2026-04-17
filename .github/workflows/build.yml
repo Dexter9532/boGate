@@ -33,20 +33,15 @@ jobs:
           . .venv/bin/activate
           pip install kas
 
-      - name: Restore build state
-        shell: bash
-        run: |
-          mkdir -p boGate/build
-          rsync -a /home/bobo/boGate/build/conf/ boGate/build/conf/
-          rsync -a /home/bobo/boGate/build/downloads/ boGate/build/downloads/
-          rsync -a /home/bobo/boGate/build/sstate-cache/ boGate/build/sstate-cache/
-
       - name: Build image
         working-directory: boGate
         shell: bash
         run: |
           . .venv/bin/activate
-          kas-container build meta-bogate/kas/firmware.yml
+          export DL_DIR=/home/bobo/boGate/build/downloads
+          export SSTATE_DIR=/home/bobo/boGate/build/sstate-cache
+          export BB_ENV_PASSTHROUGH_ADDITIONS="$BB_ENV_PASSTHROUGH_ADDITIONS DL_DIR SSTATE_DIR"
+          kas-container build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f #v7.0.0
